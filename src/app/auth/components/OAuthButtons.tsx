@@ -14,7 +14,7 @@ const OAuthButtons = ({ className }: OAuthButtonsProps) => {
   return (
     <main className="flex gap-2 max-w-md flex-wrap">
       <Button
-        onClick={() => signIn('google', { redirectTo: '/dashboard' })}
+        onClick={() => signIn('google', { redirectTo: '/' })}
         className={cn(`flex justify-around gap-2`, className)}
         type="submit"
       >
@@ -22,15 +22,7 @@ const OAuthButtons = ({ className }: OAuthButtonsProps) => {
         <span>Sign in with Google</span>
       </Button>
       <Button
-        onClick={() => signIn('github', { redirectTo: '/dashboard' })}
-        className={cn(`flex justify-around gap-2`, className)}
-        type="submit"
-      >
-        <FaGithub />
-        <span>Sign in with Github</span>
-      </Button>
-      <Button
-        onClick={() => signIn('github', { redirectTo: '/dashboard' })}
+        onClick={() => signIn('github', { redirectTo: '/' })}
         className={cn(`flex justify-around gap-2`, className)}
         type="submit"
       >

@@ -21,17 +21,17 @@ const Register = async () => {
   }
 
   return (
-    <main className="flex justify-center items-center h-screen">
+    <main className="flex justify-center items-center h-[calc(100vh-80px)]">
       <Card className="max-w-md">
         <CardHeader>
-          <CardTitle className="text-2xl">Create account</CardTitle>
+          <CardTitle className="text-2xl">Create account or sign in</CardTitle>
           <CardDescription className="flex flex-col gap-3">
-            Enter your email below to create your account
+            Enter your email below to continue
             <form
               className="flex flex-col gap-3"
               action={async (formData) => {
                 'use server';
-                await signIn('resend', formData);
+                await signIn('resend', formData, { redirectTo: '/' });
               }}
             >
               <Input name="email" placeholder="Email" />
